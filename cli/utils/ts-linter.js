@@ -21,7 +21,7 @@ function lintSync() {
   const spawnResult = spawn.sync('./node_modules/.bin/tslint', flags);
   if (spawnResult.error) {
     logger.error(spawnResult.error.message);
-    process.exit(1);
+    return process.exit(1);
   }
 
   // Convert buffers to strings.
