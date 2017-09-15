@@ -34,11 +34,9 @@ function mergeDependencies() {
   const templateFilename = path.resolve(common.tmp, 'package.json');
   const templateJson = fs.readJSONSync(templateFilename);
 
-  for (let key in builderJson.dependencies) {
-    if (builderJson.dependencies.hasOwnProperty(key)) {
-      templateJson.dependencies[key] = builderJson.dependencies[key];
-    }
-  }
+  Object.keys(builderJson.dependencies).forEach(key => {
+    templateJson.dependencies[key] = builderJson.dependencies[key];
+  });
 
   console.log('Merging current builder deps into template');
   fs.writeJSONSync(templateFilename, templateJson, { spaces: 2 });
