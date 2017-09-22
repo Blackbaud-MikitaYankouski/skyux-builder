@@ -120,8 +120,14 @@ function spawnSelenium() {
           out_dir: seleniumDriverPath
         })
         .then(() => {
-          logger.info('Webdriver Manager has been updated.');
-          resolve(fs.readJsonSync(path.resolve(seleniumDriverPath + '/update-config.json')));
+          const updateConfigPath = path.resolve(seleniumDriverPath + '/update-config.json');
+          const updateConfig = fs.readJsonSync(updateConfigPath);
+
+          logger.info(`Webdriver Manager has been updated.`);
+          logger.info(`Reading drivers from ${updateConfigPath}`);
+          logger.info(updateConfig);
+
+          resolve(updateConfig);
         })
         .catch(reject);
     }
