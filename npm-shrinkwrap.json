@@ -1,6 +1,6 @@
 {
   "name": "@blackbaud/skyux-builder",
-  "version": "1.0.0-rc.19",
+  "version": "1.0.0",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -100,26 +100,44 @@
       "resolved": "https://registry.npmjs.org/@blackbaud/auth-client/-/auth-client-1.15.0.tgz",
       "integrity": "sha1-qt2zKTFKcVGW0MIutsO72bwfvEM="
     },
-    "@blackbaud/help-client": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@blackbaud/help-client/-/help-client-1.0.1.tgz",
-      "integrity": "sha1-flaqiN/7lkeiNovQTlystx9Idmo="
-    },
     "@blackbaud/skyux": {
-      "version": "2.0.0-rc.12",
-      "resolved": "https://registry.npmjs.org/@blackbaud/skyux/-/skyux-2.0.0-rc.12.tgz",
-      "integrity": "sha1-IJfFlx5t950JT2EMLj68MqfXwP8=",
+      "version": "2.0.3",
+      "resolved": "https://registry.npmjs.org/@blackbaud/skyux/-/skyux-2.0.3.tgz",
+      "integrity": "sha1-/4qjhS0Bc8J1+OkwiWStMP9ymsQ=",
       "dev": true,
       "requires": {
         "@angular/animations": "4.2.5",
         "dragula": "3.7.2",
         "font-awesome": "4.7.0",
         "intl": "1.2.5",
-        "microedge-rxstate": "1.0.3",
+        "microedge-rxstate": "2.0.0",
         "moment": "2.18.1",
         "ng2-dragula": "1.5.0",
         "ng2-toastr": "4.1.2",
         "web-animations-js": "2.3.1"
+      },
+      "dependencies": {
+        "microedge-rxstate": {
+          "version": "2.0.0",
+          "resolved": "https://registry.npmjs.org/microedge-rxstate/-/microedge-rxstate-2.0.0.tgz",
+          "integrity": "sha1-Jbv3OZvZw5EavVdtoLQLjm2FuSU=",
+          "dev": true
+        }
+      }
+    },
+    "@blackbaud/skyux-lib-help": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/@blackbaud/skyux-lib-help/-/skyux-lib-help-1.0.0.tgz",
+      "integrity": "sha1-w+k/ZmVWT4qZVheQa1ZeUl8Fueg=",
+      "requires": {
+        "@blackbaud/help-client": "1.0.2"
+      },
+      "dependencies": {
+        "@blackbaud/help-client": {
+          "version": "1.0.2",
+          "resolved": "https://registry.npmjs.org/@blackbaud/help-client/-/help-client-1.0.2.tgz",
+          "integrity": "sha1-l/JD0uIh+MEc7GLxtJ3q04PMusc="
+        }
       }
     },
     "@ngtools/webpack": {
@@ -5805,12 +5823,6 @@
       "version": "1.1.2",
       "resolved": "https://registry.npmjs.org/methods/-/methods-1.1.2.tgz",
       "integrity": "sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4="
-    },
-    "microedge-rxstate": {
-      "version": "1.0.3",
-      "resolved": "https://registry.npmjs.org/microedge-rxstate/-/microedge-rxstate-1.0.3.tgz",
-      "integrity": "sha1-qkwFCv8boAwok/nQ3k2OYbgCges=",
-      "dev": true
     },
     "micromatch": {
       "version": "3.1.0",
